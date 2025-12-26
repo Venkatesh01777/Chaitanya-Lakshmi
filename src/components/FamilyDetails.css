@@ -1,0 +1,99 @@
+.family-details {
+  background: #fdf8f9;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.family-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(139, 67, 86, 0.1);
+  border: 2px solid #f5e6e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.family-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(139, 67, 86, 0.15);
+}
+
+.family-icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.family-relation {
+  font-size: 0.9rem;
+  color: #8b4356;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #f5e6e8;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+}
+
+.family-name {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.family-occupation {
+  font-size: 1rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: #fdf8f9;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.occupation-icon {
+  font-size: 1.2rem;
+}
+
+.family-contact {
+  font-size: 1rem;
+  color: #8b4356;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.2rem;
+  background: #f5e6e8;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .family-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .family-card {
+    padding: 2rem 1.5rem;
+  }
+}

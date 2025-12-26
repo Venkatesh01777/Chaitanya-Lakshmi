@@ -1,0 +1,119 @@
+.header {
+  background: linear-gradient(135deg, #8b4356 0%, #a05569 100%);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.photo-placeholder {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: white;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5f5f5;
+}
+
+.photo-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5e6e8 0%, #fdf2f4 100%);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #8b4356;
+  font-weight: 500;
+  border: 3px solid #f5f5f5;
+}
+
+.name {
+  font-size: 2.8rem;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.highlight-item {
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.decorative-border {
+  height: 6px;
+  background: linear-gradient(to right, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.5) 20%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(255, 255, 255, 0.5) 80%, 
+    transparent 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 2rem;
+  }
+  
+  .header-highlights {
+    gap: 1rem;
+  }
+  
+  .highlight-item {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .photo-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+}

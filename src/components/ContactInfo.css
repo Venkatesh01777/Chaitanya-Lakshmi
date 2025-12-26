@@ -1,0 +1,105 @@
+.contact-info {
+  background: white;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #fdf8f9 0%, #fff 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(139, 67, 86, 0.1);
+  border: 2px solid #f5e6e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(139, 67, 86, 0.15);
+}
+
+.contact-icon-large {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card-title {
+  font-size: 1.3rem;
+  color: #8b4356;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.contact-number {
+  display: block;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-number:hover {
+  color: #a05569;
+}
+
+.contact-person {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+.address-card {
+  background: linear-gradient(135deg, #8b4356 0%, #a05569 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(139, 67, 86, 0.2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.address-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.address-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.address-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-card,
+  .address-card {
+    padding: 2rem;
+  }
+  
+  .contact-number {
+    font-size: 1.5rem;
+  }
+}

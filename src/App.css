@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Print styles */
+@media print {
+  .app {
+    background: white;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+    padding: 2rem 1rem;
+  }
+  
+  .header {
+    page-break-after: avoid;
+  }
+  
+  .detail-item,
+  .family-card,
+  .info-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer {
+    page-break-before: avoid;
+  }
+}
+
